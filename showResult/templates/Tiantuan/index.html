@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<head class="at-element-marker">
+    <style>
+        .cities {
+            background-color: black;
+            color: white;
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>STV Team</title>
+    <script async="" crossorigin="anonymous" type="text/javascript" src=""></script>
+</head>
+<body>
+<button type="button" onclick="myFunction()">单击这里！</button>
+
+<p id="demo"></p>
+
+<script>
+    function myFunction() {
+        const a = 4;
+        document.getElementById("demo").innerHTML = a * a;
+    }
+
+</script>
+
+<div class="cities">
+    <h2>London</h2>
+    <p>
+        London is the capital city of England.
+        It is the most populous city in the United Kingdom,
+        with a metropolitan area of over 13 million inhabitants.
+    </p>
+</div>
+<h1>我的第一个标题</h1>
+<h1>This is a heading</h1>
+<h2>This is a heading</h2>
+<h3>This is a heading</h3>
+<p>我的第一个段落。</p>
+<script type="text/javascript">
+    document.write("Hello World!")
+</script>
+<noscript>Your browser does not support JavaScript!</noscript>
+
+<script type="text/javascript">
+    function formatDate() {
+        const myDate = new Date();
+        const year = myDate.getFullYear();
+        const month = to2(myDate.getMonth() + 1);
+        const day = to2(myDate.getDate());
+        const hour = to2(myDate.getHours());
+        const minute = to2(myDate.getMinutes());
+        const second = to2(myDate.getSeconds());
+        return year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second;
+    }
+
+    function to2(m) {
+        if (m < 10) {
+            return '0' + m;
+        }
+        return m;
+    }
+
+    function printTime() {
+        const p = document.getElementById("nowTime");
+        p.innerText = formatDate();
+    }
+
+    setInterval(printTime, 1000);
+</script>
+
+<p id="nowTime"></p>
+<script type="text/javascript">
+    printTime()
+</script>
+<!--<p id="nowTime"></p>-->
+<!--<button onclick="printTime()">显示时间</button>-->
+
+</body>
+</html>
